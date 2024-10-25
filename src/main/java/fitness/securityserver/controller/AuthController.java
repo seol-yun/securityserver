@@ -57,7 +57,7 @@ public class AuthController {
             loginRequest.put("pw", encryptedPw);
 
             // 로그인 서버에 요청
-            String loginServerUrl = "http://localhost:8081/api/auth/login";
+            String loginServerUrl = "http://172.18.0.3:8080/api/auth/login";
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             HttpEntity<Map<String, String>> requestEntity = new HttpEntity<>(loginRequest, headers);
